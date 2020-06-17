@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\servo_sharpir"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"xutility": "cpp",
+			"iterator": "cpp"
+		}
+	}
+}
