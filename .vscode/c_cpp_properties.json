@@ -3,9 +3,10 @@
         {
             "name": "Win32",
             "includePath": [
+                "C:\\Users\\jackw\\Documents\\Arduino\\libraries\\SharpIR\\src",
+                "C:\\Users\\jackw\\Documents\\Arduino\\libraries\\ESP32_Mail_Client\\src",
                 "C:\\Users\\jackw\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\**",
                 "C:\\Users\\jackw\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\**",
-                "C:\\Users\\jackw\\Documents\\Arduino\\libraries\\SharpIR\\src",
                 "C:\\Users\\jackw\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools\\**",
                 "C:\\Users\\jackw\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware\\esp8266\\2.7.0\\**"
             ],
