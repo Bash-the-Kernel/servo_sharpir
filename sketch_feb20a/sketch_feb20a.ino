@@ -28,6 +28,8 @@ Servo servo1;
 int angle =0;
 int angleStep = 5;
 bool clockwise = true;
+int empty_spots = 0;
+bool is_empty = true;
 int angleMin =0;
 int angleMax = 180;
 
@@ -138,21 +140,20 @@ void loop()
     Serial.println( dist );
     servo1.write(angle);
     dist_list_1[angle/5] = dist;
+    empty_spots = 0;
     for(int i = 0; i < 37; i++)
     {
-      Serial.print(dist_list_1[i]);
-      Serial.print(" ");
+      if(dist_list_1[i] == 0){
+        empty_spots++;
+      }
     }
-    Serial.println();
     for(int i = 0; i < 37; i++)
     {
-      Serial.print(dist_list_2[i]);
-      Serial.print(" ");
+      if(dist_list_2[i] == 0){
+        empty_spots++;
+      }
     }
-    Serial.println();
-    if(dist_list_2[angle/5] != 0 || dist_list_1[angle/5] != 0 || \
-    dist_list_2[angle/5+1] != 0 || dist_list_1[angle/5+1] != 0 || \
-    dist_list_2[angle/5-1] != 0 || dist_list_1[angle/5-1] != 0)
+    if(empty_spots == 0)
     {
       if(dist_list_2[angle/5] > dist_list_1[36-angle/5]+100 || \
       dist_list_2[angle/5] < dist_list_1[36-angle/5]-100 || )
@@ -230,9 +231,20 @@ void loop()
     Serial.println( dist );
     servo1.write(angle);
     dist_list_2[angle/5] = dist;
-    if(dist_list_2[angle/5] != 0 || dist_list_1[angle/5] != 0 || \
-    dist_list_2[angle/5+1] != 0 || dist_list_1[angle/5+1] != 0 || \
-    dist_list_2[angle/5-1] != 0 || dist_list_1[angle/5-1] != 0)
+    empty_spots = 0;
+    for(int i = 0; i < 37; i++)
+    {
+      if(dist_list_1[i] == 0){
+        empty_spots++;
+      }
+    }
+    for(int i = 0; i < 37; i++)
+    {
+      if(dist_list_2[i] == 0){
+        empty_spots++;
+      }
+    }
+    if(empty_spots == 0)
     {
       if(dist_list_2[angle/5] > dist_list_1[36-angle/5]+100 || \
       dist_list_2[angle/5] < dist_list_1[36-angle/5]-100)
