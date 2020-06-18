@@ -155,11 +155,7 @@ void loop()
     dist_list_2[angle/5-1] != 0 || dist_list_1[angle/5-1] != 0)
     {
       if(dist_list_2[angle/5] > dist_list_1[36-angle/5]+100 || \
-      dist_list_2[angle/5] < dist_list_1[36-angle/5]-100 || \
-      dist_list_2[angle/5] > dist_list_1[35-angle/5]+100 || \
-      dist_list_2[angle/5] < dist_list_1[35-angle/5]-100 || \
-      dist_list_2[angle/5] > dist_list_1[37-angle/5]+100 || \
-      dist_list_2[angle/5] < dist_list_1[37-angle/5]-100 )
+      dist_list_2[angle/5] < dist_list_1[36-angle/5]-100 || )
       {
           smtpData.setLogin("smtp.gmail.com", 587, "esp32.radar@gmail.com", "Golodi45");
 
@@ -239,11 +235,7 @@ void loop()
     dist_list_2[angle/5-1] != 0 || dist_list_1[angle/5-1] != 0)
     {
       if(dist_list_2[angle/5] > dist_list_1[36-angle/5]+100 || \
-      dist_list_2[angle/5] < dist_list_1[36-angle/5]-100 || \
-      dist_list_2[angle/5] > dist_list_1[35-angle/5]+100 || \
-      dist_list_2[angle/5] < dist_list_1[35-angle/5]-100 || \
-      dist_list_2[angle/5] > dist_list_1[37-angle/5]+100 || \
-      dist_list_2[angle/5] < dist_list_1[37-angle/5]-100)
+      dist_list_2[angle/5] < dist_list_1[36-angle/5]-100)
       {
         
           smtpData.setLogin("smtp.gmail.com", 587, "esp32.radar@gmail.com", "Golodi45");
